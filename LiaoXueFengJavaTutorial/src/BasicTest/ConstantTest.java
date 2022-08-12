@@ -1,29 +1,47 @@
 package BasicTest;
 
-import java.util.Arrays;
-
 public class ConstantTest {
     public static void main(String[] args) {
+        Person person = new Person();
+        String str = new String("Main");
 
+        person.setName(str);
 
-        Person p = new Person();
-        String[] fullName = new String[] {"bao", "ruisehn"};
-        p.setName(fullName);
-        System.out.println(p.getName());
+        System.out.print("main的字符串 为： ");
+        System.out.print(str);
+        System.out.print("  哈希码为：");
+        System.out.println(System.identityHashCode(str));
 
-        fullName[0] = "ZHANG";
-        System.out.println(p.getName());
+        System.out.print("   类的字符串为： ");
+        System.out.print(person.name);
+        System.out.print("  哈希码为：");
+        System.out.println(System.identityHashCode(person.name));
+
+        str = "Main-two";
+
+        System.out.print("main的字符串为： ");
+        System.out.print(str);
+        System.out.print("  哈希码为：");
+        System.out.println(System.identityHashCode(str));
+
+        System.out.print("   类的字符串为： ");
+        System.out.print(person.name);
+        System.out.print("  哈希码为：");
+        System.out.println(System.identityHashCode(person.name));
     }
 }
 
 class Person {
-    private String[] name;
+    public String name;
 
     public String getName() {
-        return this.name[0] + " " + this.name[1];
+        return this.name;
     }
 
-    public void setName(String[] name) {
+    public void setName(String name) {
         this.name = name;
     }
+
+
 }
+
