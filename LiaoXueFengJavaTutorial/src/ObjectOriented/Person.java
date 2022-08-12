@@ -1,8 +1,8 @@
 package ObjectOriented;
 
-public class Person {
-    private String name;
-    private int age;
+public class Person extends Object{
+    protected String name;
+    protected int age;
 
     public Person(String name, int age) {
         this.name = name;
@@ -14,42 +14,27 @@ public class Person {
     }
 
     public Person() {
-        this("Unnamed");
+
     }
 
-    /**
-     * 获取
-     * @return name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置
-     * @param name
-     */
     public void setName(String name) {
         this.name = name;
     }
+}
 
-    /**
-     * 获取
-     * @return age
-     */
-    public int getAge() {
-        return age;
+class Student extends Person {
+    private int score;
+
+    public String hello() {
+        return "Hello" + super.name;
     }
 
-    /**
-     * 设置
-     * @param age
-     */
-    public void setAge(int age) {
-        this.age = age;
+    Student(String name, int age, int score) {
+        super(name, age);
+        this.score = score;
     }
 
-    public String toString() {
-        return "Person{name = " + name + ", age = " + age + "}";
+    Student() {
+
     }
 }
