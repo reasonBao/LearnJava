@@ -20,10 +20,19 @@ public class Person extends Object{
     public void setName(String name) {
         this.name = name;
     }
+
+    public void run() {
+        System.out.println("This is 人类");
+    }
 }
 
 class Student extends Person {
     private int score;
+
+    @Override
+    public void run() {
+        System.out.println("This is 学生类");
+    }
 
     public String hello() {
         return "Hello" + super.name;
