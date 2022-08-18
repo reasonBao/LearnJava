@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LearnJava.iml" filepath="$PROJECT_DIR$/LearnJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/LiaoXueFengJavaTutorial/LiaoXueFengJavaTutorial.iml" filepath="$PROJECT_DIR$/LiaoXueFengJavaTutorial/LiaoXueFengJavaTutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oop-package/oop-package.iml" filepath="$PROJECT_DIR$/oop-package/oop-package.iml" />
     </modules>
   </component>
 </project>
