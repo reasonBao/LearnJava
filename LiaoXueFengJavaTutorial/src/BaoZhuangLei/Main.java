@@ -1,19 +1,23 @@
 package BaoZhuangLei;
 
-import java.beans.BeanInfo;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.RoundingMode;
-
+/**
+ * Learn Java from https://www.liaoxuefeng.com/
+ *
+ * @author liaoxuefeng
+ */
 public class Main {
+
     public static void main(String[] args) {
-        BigDecimal d1 = new BigDecimal(123.456);
-        BigDecimal d2 = new BigDecimal(23.456789);
-        BigDecimal d3 = d1.divide(d2, 10, RoundingMode.HALF_UP);    // 四舍五入
-        BigDecimal d4 = d1.divide(d2);
+        System.out.println(tax(2000, 0.1));
+        System.out.println(tax(-200, 0.1));
+        System.out.println(tax(2000, -0.1));
+    }
+
+    static double tax(int salary, double rate) {
+        // TODO: 如果传入的参数为负，则抛出IllegalArgumentException
+        if (salary < 0 || rate < 0) {
+            throw  new IllegalArgumentException();
+        }
+        return salary * rate;
     }
 }
-
-
